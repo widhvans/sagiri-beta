@@ -1,5 +1,5 @@
 from telegram import Update
-from telegram.ext import Application, CommandHandler, ContextTypes
+from telegram.ext import Application, CommandHandler, Context28ContextTypes
 from pymongo import MongoClient
 from config import MONGO_URI
 import logging
@@ -7,7 +7,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 client = MongoClient(MONGO_URI)
-db = client.get_database()
+db = client.get_database("mychannelbot")
 
 async def autoforward(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat = update.effective_chat
