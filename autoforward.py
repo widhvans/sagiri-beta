@@ -1,5 +1,5 @@
 from telegram import Update
-from telegram.ext import Application, CommandHandler, Context28ContextTypes
+from telegram.ext import Application, CommandHandler, ContextTypes
 from pymongo import MongoClient
 from config import MONGO_URI
 import logging
