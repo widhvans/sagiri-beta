@@ -7,7 +7,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 client = MongoClient(MONGO_URI)
-db = client.get_database()
+db = client.get_database("mychannelbot")
 
 async def stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user = update.effective_user
