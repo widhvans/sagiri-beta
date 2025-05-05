@@ -7,7 +7,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 client = MongoClient(MONGO_URI)
-db = client.get_database()
+db = client.get_database("mychannelbot")
 
 async def nchannels(update: Update, context: ContextTypes.DEFAULT_TYPE):
     channels = db.channels.find()
